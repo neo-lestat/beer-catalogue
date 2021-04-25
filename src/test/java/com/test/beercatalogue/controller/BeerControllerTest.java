@@ -38,11 +38,6 @@ class BeerControllerTest {
     private BeerRepository repository;
 
     @Test
-    public void greetingShouldReturnDefaultMessage() throws Exception {
-
-    }
-
-    @Test
     void getById() throws Exception {
         Beer beer = new Beer();
         beer.setId(1);

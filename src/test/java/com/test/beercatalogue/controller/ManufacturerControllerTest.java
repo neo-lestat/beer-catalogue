@@ -41,11 +41,6 @@ class ManufacturerControllerTest {
     private ManufacturerRepository repository;
 
     @Test
-    public void greetingShouldReturnDefaultMessage() throws Exception {
-
-    }
-
-    @Test
     void getById() throws Exception {
         Manufacturer manufacturer = new Manufacturer();
         manufacturer.setId(1);
