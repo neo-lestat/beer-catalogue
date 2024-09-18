@@ -2,8 +2,8 @@ package com.test.beercatalogue.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Data
 @Entity
@@ -18,7 +18,7 @@ public class Beer {
     private Float graduation;
     private String beerType;
     private String description;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "fk_manufacturer", nullable = false, updatable = false)
     private Manufacturer manufacturer;
 }

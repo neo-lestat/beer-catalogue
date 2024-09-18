@@ -2,9 +2,8 @@ package com.test.beercatalogue.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import java.util.List;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Data
 @Entity

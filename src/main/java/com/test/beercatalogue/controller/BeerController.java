@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -41,7 +41,7 @@ public class BeerController {
     @PutMapping(produces = "application/json")
     public Beer update(@Valid @RequestBody Beer beer) throws Exception {
         if (beer.getId() == null) {
-            throw new Exception("beer id is no null");
+            throw new Exception("beer id is null");
         }
         return beerRepository.save(beer);
     }

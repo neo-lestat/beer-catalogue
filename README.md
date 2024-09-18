@@ -4,7 +4,7 @@ Hello welcome to this little spring-boot project
 
 ## Requirements
 
-1. java 11
+1. java 21
 2. maven
 3. docker (optional)
 
@@ -32,6 +32,8 @@ docker run -p 8080:8080 beer-catalogue
 ```
 
 ## How to Call the api
+
+There is **swagger ui** at http://localhost:8080/swagger-ui/index.html available
 
 ### Manufacturer
 
@@ -109,7 +111,7 @@ curl --request GET \
 In this method the param name is optional
 ```
 curl --request GET \
-  --url 'http://localhost:8080/api/manufacturer/all?name=&page=0&size=5' \
+  --url 'http://localhost:8080/api/beer/all?name=&page=0&size=5' \
   --header 'Content-Type: application/json' \
 ```
 
@@ -119,7 +121,7 @@ curl --request PUT \
   --url http://localhost:8080/api/beer \
   --header 'Content-Type: application/json' \
   --data '{
-    "id": 1
+    "id": 1,
 	"name": "estrella",
 	"graduation": 0.8,
 	"description": "beer ale type",
