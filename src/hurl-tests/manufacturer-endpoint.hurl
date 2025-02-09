@@ -1,25 +1,13 @@
 # Manufacturer
 # Requieres fresh database (as H2 mem is used we just need to restart the application)
 
-#add manufacturer that will be use in beer-enpoint tests
-POST http://localhost:8080/api/manufacturer
-Content-Type: application/json
-{
-	"name": "estrella",
-	"nationality": "spanish"
-}
-HTTP 200
-[Captures]
-manufacturer-id: jsonpath "$['id']"
-[Asserts]
-jsonpath "$['id']" == 1
-jsonpath "$.name" == "estrella"
+#hurl v6 improve json template so no need to add a extra manufacturer here
 
 #add
 POST http://localhost:8080/api/manufacturer
 Content-Type: application/json
 {
-	"name": "estrella 2",
+	"name": "estrella-manufacturer",
 	"nationality": "spanish"
 }
 HTTP 200
